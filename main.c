@@ -6,6 +6,7 @@
 #include <time.h>
 #define LOGIN "dad"
 
+unsigned char *imagem;
 
 int largura, altura, max_iteracoes, num_threads;
 
@@ -22,7 +23,7 @@ int ler_inteiro(const char *texto, int *valor){
     return 1;
 }
 
-unsigned char calcular_pixel(int linnha, int coluna){
+unsigned char calcular_pixel(int linha, int coluna){
     double c_real;
     double c_imag;
     double z_real = 0.0;
@@ -30,4 +31,89 @@ unsigned char calcular_pixel(int linnha, int coluna){
     double novo_real;
     double interacao = 0;
 
+    if(largura == 1){
+        c_real = -2.0;
+    }
+    else{
+        c_real = -2.0+3.0 * coluna / (largura-1);
+    }
+    if(altura == 1){
+        c_imag = 1.5;
+    }
+    else{
+        c_imag = -1.5 + 3.0 * linha / (altura -1);
+    }
+    while (interacao<max_iteracoes && z_real*z_real +z_imag*z_imag<=4){
+        novo_real = z_real*z_real - z_imag * z_imag + c_real;
+
+        z_imag = 2.0 * z_real * z_imag + c_imag;
+        z_real = novo_real;
+        interacao++;
+    }
+    return(unsigned char)(255.0 * iteracao / max_iteracoes);
+
 }
+void executar_serial(void){
+    int linha,coluna;
+
+    for( linha = 0; linha<altura; linha++){
+        for(coluna = 0; coluna < largura; coluna++){
+            imagem[linha*largura+coluna] = calcular_pixel(linha, coluna);
+        }
+    }
+}
+
+int salvar_imagem(void){
+    FILE*arquivo;
+    int linha, coluna;
+    arquivo = fopen("mandelbro" LOGIN "_serial.pgm", "w");
+    if(arquivo == NULL){
+        return 0;
+    }
+    for(linha =0; linha < altura; linha++){
+        for(coluna =0; coluna<largura;coluna++){
+            if(fprintf(arquivo, "%d%c", imagem[linha * largura + coluna], coluna == largura - 1 ? '\n' : ' ') <0){
+                fclose(arquivo);
+                return 0;
+            }
+        }
+    } 
+    return fclose(arquivo) == 0;
+}
+
+double calcular_tempo(struct  timespec inicio, struct timespec fim){
+    return fim.tv_sec - inicio.tv_sec+(fim.tv_nsec-inicio.tv_nsec) / 100000000.0;
+
+}
+ int salvar_tempo(double tempo){
+    FILE *arquivo;
+    arquivo = fopen("times.txt", "w");
+    if (arquivo == NULL){
+        return 0;
+    }
+    if(fprintf(arquivo, "Serial: %.6fs\n", tempo) < 0){
+        fclose(arquivo);
+        return 0;
+    }
+    return fclose(arquivo)==0;
+ }
+
+ int main(int argc, char *argv[]){
+    struct timespec inicio,fim;
+    double tempo;
+    size_t quantidade_pixels;
+    if(argc != 5){
+        fprintf(stderr, "Uso: %s largura altura max_iteracoes num_threads\n", argv[0]);
+        return 1;
+    }
+    if(!ler_inteiro(argv[1], &largura) || !ler_inteiro(argv[2], &altura) || !ler_inteiro(argv[3], &max_iteracoes) || !ler_inteiro(argv[4], &num_threads)){
+        fprintf(stderr, "Erro: use apenas inteiros posivtivos.\n");
+        return 1;
+    }
+    if ((size_t)largura> SIZE_MAX / (size_t)altura){
+        fprintf(stderr,"Erro: imagem muito grande");
+        return 1;
+    }
+    quantidade_pixels = (size_t)largura * altura;
+    imagem = malloc(quantidade_pixels * sizeof *imagem);
+ }
