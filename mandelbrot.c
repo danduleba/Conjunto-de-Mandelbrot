@@ -5,11 +5,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <omp.h>
+#include <pthread.h>
 #define LOGIN "dad"
 
 unsigned char *imagem;
 
 int largura, altura, max_iteracoes, num_threads;
+
+typedef struct{
+    int inicio;
+    int fim;
+}Faixa;
 
 int ler_inteiro(const char *texto, int *valor){
     char *fim;
@@ -30,7 +37,7 @@ unsigned char calcular_pixel(int linha, int coluna){
     double z_real = 0.0;
     double z_imag = 0.0;
     double novo_real;
-    double iteracao = 0;
+    int iteracao = 0;
 
     if(largura == 1){
         c_real = -2.0;
@@ -39,7 +46,7 @@ unsigned char calcular_pixel(int linha, int coluna){
         c_real = -2.0+3.0 * coluna / (largura-1);
     }
     if(altura == 1){
-        c_imag = 1.5;
+        c_imag = -1.5;
     }
     else{
         c_imag = -1.5 + 3.0 * linha / (altura -1);
@@ -54,20 +61,78 @@ unsigned char calcular_pixel(int linha, int coluna){
     return(unsigned char)(255.0 * iteracao / max_iteracoes);
 
 }
-void executar_serial(void){
-    int linha,coluna;
 
-    for( linha = 0; linha<altura; linha++){
+void calcular_linhas(int inicio, int fim){
+    int linha, coluna;
+
+    for(linha= inicio; linha < fim; linha++){
         for(coluna = 0; coluna < largura; coluna++){
-            imagem[linha*largura+coluna] = calcular_pixel(linha, coluna);
+            imagem[(size_t)linha * largura+coluna]= calcular_pixel(linha,coluna);
         }
     }
 }
 
-int salvar_imagem(void){
+void executar_serial(void){
+    calcular_linhas(0, altura);
+}
+
+void executar_openmp(void){
+    int linha, coluna;
+
+    #pragma omp parallel for num_threads(num_threads) private(coluna)
+    for(linha = 0; linha < altura; linha++){
+        for(coluna = 0; coluna < largura; coluna++){
+            imagem[(size_t)linha*largura+coluna]=calcular_pixel(linha,coluna);
+        }
+    }
+}
+
+void *rotina_pthreads1(void *argumento){
+    Faixa *faixa +(Faixa *)argumento;
+
+    calcular_linhas(faixa->inicio,faixa->fim);
+    return NULL;
+}
+
+int executar_pthreads1(void){
+    pthread_t *threads;
+    Faixa *faixa;
+    int criadas = 0;
+    int sucesso = 1;
+    int i;
+
+    threads = calloc((size_t)num_threads, sizeof *threads);
+    faixas = calloc((size_t)num_threads, sizeof *faixas);
+
+    if(threads == NULL || faixas == NULL){
+        free(threads);
+        free(faixas);
+        return 0;
+    }
+    for( i=0; i<num_threads; i++){
+        faixas[i].inicio=(int)((size_t)(i+1)* altura/num_threads);
+        faixas[i].fim=(int)((size_t)(i+1)* altura/num_threads);
+
+        if(pthread_create(&threads[i],NULL, rotina_pthreads1, &faixas[i]) !=0){
+            sucesso =0;
+            break;
+        }
+        criadas++;
+    }
+    for(i=0;i<criadas; i++){
+        if(pthread_join(threads[i], NULL) !=0){
+            sucesso =0;
+        }
+    }
+    free(threads);
+    free(faixa);
+    return sucesso;
+}
+
+int salvar_imagem(const char*nome){
     FILE*arquivo;
     int linha, coluna;
-    arquivo = fopen("mandelbrot_" LOGIN "_serial.pgm", "w");
+    arquivo = fopen(nome, "w");
     if(arquivo == NULL){
         return 0;
     }
