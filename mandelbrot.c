@@ -111,7 +111,7 @@ int executar_pthreads1(void){
     }
     for( i=0; i<num_threads; i++){
         faixas[i].inicio=(int)((size_t)i* altura/num_threads);
-        faixas[i].fim=(int)((size_t)(i+1*) altura/num_threads);
+        faixas[i].fim=(int)((size_t)(i+1)* altura/num_threads);
 
         if(pthread_create(&threads[i],NULL, rotina_pthreads1, &faixas[i]) !=0){
             sucesso =0;
@@ -138,7 +138,7 @@ int salvar_imagem(const char*nome){
     }
     for(linha =0; linha < altura; linha++){
         for(coluna =0; coluna<largura;coluna++){
-            if(fprintf(arquivo, "%d%c", imagem[linha * largura + coluna], coluna == largura - 1 ? '\n' : ' ') <0){
+            if(fprintf(arquivo, "%d%c", imagem[(size_t)linha * largura + coluna], coluna == largura - 1 ? '\n' : ' ') <0){
                 fclose(arquivo);
                 return 0;
             }
@@ -147,23 +147,25 @@ int salvar_imagem(const char*nome){
     return fclose(arquivo) == 0;
 }
 
-double calcular_tempo(struct  timespec inicio, struct timespec fim){
-    return fim.tv_sec - inicio.tv_sec+(fim.tv_nsec-inicio.tv_nsec) / 100000000.0;
-
+double calcular_tempo(struct timespec inicio, struct timespec fim) {
+    return fim.tv_sec - inicio.tv_sec +(fim.tv_nsec - inicio.tv_nsec) / 1000000000.0;
 }
- int salvar_tempo(double serial, double openmp, double pthreads1){
+
+int salvar_tempos(double serial,double openmp,double pthreads1) {
     FILE *arquivo;
     arquivo = fopen("times.txt", "w");
-    if (arquivo == NULL){
-        return 0;
-    }
-    if(fprinf(arquivo, "Serial: %.6fs\n""OpenMP: %.6fs\n" "Pthreads1: %.6fs\n", serial, openmp, pthreads1)<0){
-        fclose(arquivo;)
+
+    if (arquivo == NULL) {
         return 0;
     }
 
-    return fclose(arquivo)==0;
- }
+    if (fprintf(arquivo,"Serial: %.6fs\n""OpenMP: %.6fs\n""Pthreads1: %.6fs\n",serial, openmp, pthreads1) < 0) {
+        fclose(arquivo);
+        return 0;
+    }
+
+    return fclose(arquivo) == 0;
+}
 
  int main(int argc, char *argv[]){
     struct timespec inicio,fim;
@@ -193,30 +195,40 @@ double calcular_tempo(struct  timespec inicio, struct timespec fim){
     clock_gettime(CLOCK_MONOTONIC, &inicio);
     executar_serial();
     clock_gettime(CLOCK_MONOTONIC, &fim);
-    tempo = calcular_tempo(inicio, fim);
+    tempo_serial = calcular_tempo(inicio, fim);
+    
 
     if(!salvar_imagem("mandelbrot_" LOGIN "_serial.pgm")){
         fprintf(stderr, "Erro ao criar a imagem serial.\n");
         free(imagem);
-        return;
+        return 1;
     }
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
+    executar_openmp();
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+
+    tempo_openmp = calcular_tempo(inicio, fim);
+
     if(!salvar_imagem("mandelbrot_" LOGIN "_openmp.pgm")){
         fprintf(stderr, "erro ao criar imagem openmp.\n");
-        free(iamgem);
-        return;
+        free(imagem);
+        return 1;
     }
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
     if (!executar_pthreads1()) {
         fprintf(stderr, "erro na execução pthreads1\n");
         free(imagem);
         return 1;
     }
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    tempo_pthreads1 = calcular_tempo(inicio, fim);
     if (!salvar_imagem("mandelbrot_" LOGIN "_pthreads1.pgm")) {
         fprintf(stderr, "Erro ao criar a imagem Pthreads 1.\n");
         free(imagem);
         return 1;
     }
      if (!salvar_tempos(tempo_serial,tempo_openmp, tempo_pthreads1)){
-        fprint(stderr, "erro ao criar times.txt.\n");
+        fprintf(stderr, "erro ao criar times.txt.\n");
         free(imagem);
         return 1;
      }
