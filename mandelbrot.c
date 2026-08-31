@@ -123,7 +123,7 @@ int executar_pthreads1(void){
 }
 
 
-rotina_pthreads2(void *argumento){
+void *rotina_pthreads2(void *argumento){
     int linha;
     (void)argumento;
 
@@ -135,9 +135,38 @@ rotina_pthreads2(void *argumento){
         }
         linha = proxima_linha;
         proxima_linha++;
+        pthread_mutex_unlock(&mutex);
         calcular_linhas(linha, linha+1);
     }
     return NULL;
+}
+
+int executar_pthreads2(void){
+    pthread_t *threads;
+    int criadas = 0;
+    int certo =1;
+    int i;
+    threads = calloc((size_t)num_threads, sizeof * threads);
+
+    if(threads == NULL){
+        return 0;
+    }
+    proxima_linha =0;
+
+    for(i=0; i< num_threads; i++){
+        if(pthread_create(&threads[i], NULL, rotina_pthreads2, NULL) !=0){
+            certo = 0;
+            break;
+        }
+        criadas++;
+    } 
+    for(i=0; i<criadas; i++){
+        if(pthread_join(threads[i], NULL) !=0){
+            certo = 0;
+        }
+    }
+    free(threads);
+    return certo;
 }
 
 int salvar_imagem(const char*nome){
@@ -162,7 +191,7 @@ double calcular_tempo(struct timespec inicio, struct timespec fim) {
     return fim.tv_sec - inicio.tv_sec +(fim.tv_nsec - inicio.tv_nsec) / 1000000000.0;
 }
 
-int salvar_tempos(double serial,double openmp,double pthreads1) {
+int salvar_tempos(double serial,double openmp,double pthreads1, double pthreads2){
     FILE *arquivo;
     arquivo = fopen("times.txt", "w");
 
@@ -170,7 +199,7 @@ int salvar_tempos(double serial,double openmp,double pthreads1) {
         return 0;
     }
 
-    if (fprintf(arquivo,"Serial: %.6fs\n""OpenMP: %.6fs\n""Pthreads1: %.6fs\n",serial, openmp, pthreads1) < 0) {
+    if (fprintf(arquivo,"Serial: %.6fs\n""OpenMP: %.6fs\n""Pthreads1: %.6fs\n" "Pthreads2: %.6fs\n",serial, openmp, pthreads1, pthreads2) < 0) {
         fclose(arquivo);
         return 0;
     }
@@ -183,6 +212,7 @@ int salvar_tempos(double serial,double openmp,double pthreads1) {
     double tempo_serial;
     double tempo_openmp;
     double tempo_pthreads1;
+    double tempo_pthreads2;
     size_t quantidade_pixels;
     if(argc != 5){
         fprintf(stderr, "Uso: %s largura altura max_iteracoes num_threads\n", argv[0]);
@@ -238,11 +268,26 @@ int salvar_tempos(double serial,double openmp,double pthreads1) {
         free(imagem);
         return 1;
     }
-     if (!salvar_tempos(tempo_serial,tempo_openmp, tempo_pthreads1)){
+    clock_gettime(CLOCK_MONOTONIC, &inicio);
+    if(!executar_pthreads2()){
+        fprintf(stderr, "Erro na execução do ptheads2.\n");
+        free(imagem);
+        return 1;
+    }
+    clock_gettime(CLOCK_MONOTONIC, &fim);
+    tempo_pthreads2 = calcular_tempo(inicio, fim);
+
+    if(!salvar_imagem("mandelbrot_" LOGIN "_pthreads2.pgm")){
+        fprintf(stderr, "Erro ao gerar imagem pthreads 2 .\n");
+        free(imagem);
+        return 1;
+    }
+     if (!salvar_tempos(tempo_serial,tempo_openmp, tempo_pthreads1, tempo_pthreads2)){
         fprintf(stderr, "erro ao criar times.txt.\n");
         free(imagem);
         return 1;
      }
+     pthread_mutex_destroy(&mutex);
      free(imagem);
      return 0;
  }

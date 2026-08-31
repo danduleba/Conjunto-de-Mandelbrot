@@ -1,0 +1,60 @@
+Script iniciado em 2026-08-31 07:37:12-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="154" LINES="13"]
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ pwdwhoami[2Pdate
+[?2004lseg 31 ago 2026 07:37:15 -03
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ date[1Ppwdwhoami
+[?2004lguest
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ whoami[2Pdate[1Ppwd
+[?2004l/home/guest/Desktop/implementação 2/Conjunto-de-Mandelbrot
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ .^V[K[7m/mandelbrot 4 4 50 1[27m/mandelbrot 4 4 50 1
+[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat mandelbrot_dad_serial.pgm[27mcat mandelbrot_dad_serial.pgm
+[?2004l5 10 10 10
+5 25 255 10
+5 25 255 10
+5 10 10 10
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1[27m
+[7mcat mandelbrot_dad_serial.pgm[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 4 4 50 1
+cat mandelbrot_dad_serial.pgm
+[?2004l5 10 10 10
+5 25 255 10
+5 25 255 10
+5 10 10 10
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l[01m[Kmandelbrot.c:126:1:[m[K [01;31m[Kerror: [m[Kreturn type defaults to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wimplicit-int-Wimplicit-int]8;;[m[K]
+  126 | [01;31m[Krotina_pthreads2[m[K(void *argumento){
+      | [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Krotina_pthreads2[m[K’:
+[01m[Kmandelbrot.c:140:12:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kvoid *[m[K’ from a function with return type ‘[01m[Kint[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+  140 |     return [01;31m[KNULL[m[K;
+      |            [01;31m[K^~~~[m[K
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^C[?2004l[?2004h[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git add[K[K[K[K[K[K[K[7mgit add mandelbrot.c[27mgit add mandelbrot.c
+[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git commit -m "estu[Krutura inicial de pthreads [K2"
+[?2004l[main 96900cc] estrutura inicial de pthreads2
+ 1 file changed, 23 insertions(+), 12 deletions(-)
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git push
+[?2004lEnumerating objects: 5, done.
+Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 539 bytes | 539.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/danduleba/Conjunto-de-Mandelbrot.git
+   ac5a2c8..96900cc  main -> main
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7m./mandelbrot 4 4 50 2[27m./mandelbrot 4 4 50 2
+[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
+[?2004lSerial: 0.000002s
+OpenMP: 0.000040s
+Pthreads1: 0.000063s
+Pthreads2: 0.000041s
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm[27m
+[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm[27m
+[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm[27m[A[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Man
