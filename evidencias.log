@@ -57,4 +57,37 @@ Pthreads1: 0.000063s
 Pthreads2: 0.000041s
 [?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm[27m
 [7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm[27m
-[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm[27m[A[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Man
+[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm[27m[A[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-ManScript started on 2026-08-31 17:07:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="185" LINES="24"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git push[K[7m./mandelbrot 800 600 1000 4[27m./mandelbrot 800 600 1000 4
+[?2004lbash: ./mandelbrot: No such file or directory
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 800 600 1000 4git push[Kcommit -m "correção de execução e medição das versoes paralelas"add mandelbrot.c[Kcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 800 600 1000 4[K
+[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
+[?2004lSerial: 0.204066s
+OpenMP: 0.101460s
+Pthreads1: 0.100457s
+Pthreads2: 0.051779s
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"[27m
+[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"[27m
+[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"[27m[A[Acmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"
+cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"
+cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"
+[?2004lOpenMP: imagem igual
+Pthreads1: imagem igual
+Pthreads2: imagem igual
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mgit add mandelbrot.c evidencias.log[27mgit add mandelbrot.c evidencias.log
+[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git commmit -m "feit[K[K[K[Kpthreads2 feito e testes [K[K[K[K[K[K[Kalguns testes
+[?2004l[?2004h> git commmit -m "pthreads2 feito e alguns testes"
+[?2004l[?2004h> git commmit -m "pthreads2 feito e alguns testes
+git commmit -m "pthreads2 feito e alguns testes"[A[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommmit -m "pthreads2 feito e alguns testes
+git commmit -m "pthreads2 feito e alguns testes"[A[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"1.pgm && echo "Pthreads1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Popenmp.pgm && echo "OpenMP[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cat times.txt[K[C[C./mandelbrot 800 600 1000 4[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot[C[C./mandelbrot 800 600 1000 4[K[C[Cgit push[Kcommit -m "correção de execução e medição das versoes paralelas"[C[C[C[C[C[Cadd mandelbrot.c[K[C[C[Ccc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste[C[Ccd "Conjunto-de-Mandelbrot"[K[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste[C[Cscript -a evidencias.log[K[C[C[16Pgit pushcommit -m "openmp com erro de de digitação"[C[C[C[C[C[C[27Padd mandelbrot.c[C[C[C[C[C[Ccommit -m "openmp com erro de de digitação"[C[C[C[C[C[Cpush[K[C[Cscript -a evidencias.log[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste[C[Ccd "Conjunto-de-Mandelbrot"[K[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste[K[C[C[Cit add mandelbrot.c[K[C[C[C[C[C[Ccommit -m "correção de execução e medição das versoes paralelas"[C[C[C[C[C[Cpush[K[C[C./mandelbrot 800 600 1000 4[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot[C[C./mandelbrot 800 600 1000 4[K[C[C[14Pcat times.txt[C[C[Cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"[6@pthreads1.pgm && echo "Pthreads1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.pgm && echo "Pthreads2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[60Pgit add mandelbrot.c evidencias.log[C[C[C[C[C[Ccommmit -m "pthreads2 feito e alguns testes
+git commmit -m "pthreads2 feito e alguns testes"[A[C[C[K
+[K[A[C[C
+[?2004l[?2004h> exit
+[?2004l[?2004h> [?2004l
+bash: unexpected EOF while looking for matching `"'
+exit
+
+Script done on 2026-08-31 17:25:40-03:00 [COMMAND_EXIT_CODE="2"]
