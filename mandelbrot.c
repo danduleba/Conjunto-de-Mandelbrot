@@ -12,6 +12,8 @@
 unsigned char *imagem;
 
 int largura, altura, max_iteracoes, num_threads;
+int proxima_linha;
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 
 typedef struct{
     int inicio;
@@ -39,18 +41,9 @@ unsigned char calcular_pixel(int linha, int coluna){
     double novo_real;
     int iteracao = 0;
 
-    if(largura == 1){
-        c_real = -2.0;
-    }
-    else{
-        c_real = -2.0+3.0 * coluna / (largura-1);
-    }
-    if(altura == 1){
-        c_imag = -1.5;
-    }
-    else{
-        c_imag = -1.5 + 3.0 * linha / (altura -1);
-    }
+    c_real = -2.0+3.0 * coluna / largura;
+    c_imag = -1.5 + 3.0 * linha / altura;
+    
     while (iteracao<max_iteracoes && z_real*z_real +z_imag*z_imag<=4){
         novo_real = z_real*z_real - z_imag * z_imag + c_real;
 
@@ -127,6 +120,24 @@ int executar_pthreads1(void){
     free(threads);
     free(faixas);
     return sucesso;
+}
+
+
+rotina_pthreads2(void *argumento){
+    int linha;
+    (void)argumento;
+
+    while(1){
+        pthread_mutex_lock(&mutex);
+        if(proxima_linha >= altura){
+            pthread_mutex_unlock(&mutex);
+            break;
+        }
+        linha = proxima_linha;
+        proxima_linha++;
+        calcular_linhas(linha, linha+1);
+    }
+    return NULL;
 }
 
 int salvar_imagem(const char*nome){
