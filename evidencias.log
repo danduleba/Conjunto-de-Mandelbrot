@@ -1,88 +1,123 @@
-Script iniciado em 2026-08-31 07:37:12-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="154" LINES="13"]
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ pwdwhoami[2Pdate
-[?2004lseg 31 ago 2026 07:37:15 -03
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ date[1Ppwdwhoami
-[?2004lguest
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ whoami[2Pdate[1Ppwd
-[?2004l/home/guest/Desktop/implementação 2/Conjunto-de-Mandelbrot
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
-[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
--fopenmp -pthread mandelbrot.c -o mandelbrot
-[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ .^V[K[7m/mandelbrot 4 4 50 1[27m/mandelbrot 4 4 50 1
-[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat mandelbrot_dad_serial.pgm[27mcat mandelbrot_dad_serial.pgm
-[?2004l5 10 10 10
-5 25 255 10
-5 25 255 10
-5 10 10 10
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [K]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1[27m
-[7mcat mandelbrot_dad_serial.pgm[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 4 4 50 1
-cat mandelbrot_dad_serial.pgm
-[?2004l5 10 10 10
-5 25 255 10
-5 25 255 10
-5 10 10 10
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
-[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
--fopenmp -pthread mandelbrot.c -o mandelbrot
-[?2004l[01m[Kmandelbrot.c:126:1:[m[K [01;31m[Kerror: [m[Kreturn type defaults to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wimplicit-int-Wimplicit-int]8;;[m[K]
-  126 | [01;31m[Krotina_pthreads2[m[K(void *argumento){
-      | [01;31m[K^~~~~~~~~~~~~~~~[m[K
-[01m[Kmandelbrot.c:[m[K In function ‘[01m[Krotina_pthreads2[m[K’:
-[01m[Kmandelbrot.c:140:12:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kvoid *[m[K’ from a function with return type ‘[01m[Kint[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
-  140 |     return [01;31m[KNULL[m[K;
-      |            [01;31m[K^~~~[m[K
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^C[?2004l[?2004h[?2004l
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git add[K[K[K[K[K[K[K[7mgit add mandelbrot.c[27mgit add mandelbrot.c
-[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git commit -m "estu[Krutura inicial de pthreads [K2"
-[?2004l[main 96900cc] estrutura inicial de pthreads2
- 1 file changed, 23 insertions(+), 12 deletions(-)
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git push
-[?2004lEnumerating objects: 5, done.
-Counting objects:  20% (1/5)Counting objects:  40% (2/5)Counting objects:  60% (3/5)Counting objects:  80% (4/5)Counting objects: 100% (5/5)Counting objects: 100% (5/5), done.
-Delta compression using up to 12 threads
-Compressing objects:  33% (1/3)Compressing objects:  66% (2/3)Compressing objects: 100% (3/3)Compressing objects: 100% (3/3), done.
-Writing objects:  33% (1/3)Writing objects:  66% (2/3)Writing objects: 100% (3/3)Writing objects: 100% (3/3), 539 bytes | 539.00 KiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
-remote: Resolving deltas:   0% (0/2)[Kremote: Resolving deltas:  50% (1/2)[Kremote: Resolving deltas: 100% (2/2)[Kremote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
-To https://github.com/danduleba/Conjunto-de-Mandelbrot.git
-   ac5a2c8..96900cc  main -> main
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
-[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
--fopenmp -pthread mandelbrot.c -o mandelbrot
-[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7m./mandelbrot 4 4 50 2[27m./mandelbrot 4 4 50 2
-[?2004l[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
-[?2004lSerial: 0.000002s
-OpenMP: 0.000040s
-Pthreads1: 0.000063s
-Pthreads2: 0.000041s
-[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm[27m
-[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm[27m
-[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm[27m[A[A]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-ManScript started on 2026-08-31 17:07:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="185" LINES="24"]
-[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git push[K[7m./mandelbrot 800 600 1000 4[27m./mandelbrot 800 600 1000 4
-[?2004lbash: ./mandelbrot: No such file or directory
-[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 800 600 1000 4git push[Kcommit -m "correção de execução e medição das versoes paralelas"add mandelbrot.c[Kcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
-[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 800 600 1000 4[K
-[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
-[?2004lSerial: 0.204066s
-OpenMP: 0.101460s
-Pthreads1: 0.100457s
-Pthreads2: 0.051779s
-[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"[27m
-[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"[27m
-[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"[27m[A[Acmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"
-cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"
-cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"
-[?2004lOpenMP: imagem igual
-Pthreads1: imagem igual
-Pthreads2: imagem igual
-[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mgit add mandelbrot.c evidencias.log[27mgit add mandelbrot.c evidencias.log
-[?2004l[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git commmit -m "feit[K[K[K[Kpthreads2 feito e testes [K[K[K[K[K[K[Kalguns testes
-[?2004l[?2004h> git commmit -m "pthreads2 feito e alguns testes"
-[?2004l[?2004h> git commmit -m "pthreads2 feito e alguns testes
-git commmit -m "pthreads2 feito e alguns testes"[A[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommmit -m "pthreads2 feito e alguns testes
-git commmit -m "pthreads2 feito e alguns testes"[A[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[/User/Desktop/implementação2/Conjunto-de-M
+Script started on 2026-08-28 09:08:48-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="71" LINES="18"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+
+andelbrot[00m$ 
+[K
+[A[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 mandelbrot.c -o mandelbrot[27mgcc -Wall -Wextra -pedantic -std=c11 mandelbrot.c -o mandelbrot
+[?2004l
+[01m[Kcc1:[m[K [01;31m[Kfatal error: [m[Kmandelbrot.c: No such file or directory
+compilation terminated.
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 mandelbrot.c -o mandelbrot
+[?2004l
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Kcalcular_pixel[m[K’:
+[01m[Kmandelbrot.c:53:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kiteracao[m[K’ undeclared (first use in this function); did you mean ‘[01m[Kinteracao[m[K’?
+   53 |     return(unsigned char)(255.0 * [01;31m[Kiteracao[m[K / max_iteracoes);
+      |                                   [01;31m[K^~~~~~~~[m[K
+      |                                   [32m[Kinteracao[m[K
+[01m[Kmandelbrot.c:53:35:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmandelbrot.c:124:5:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kclock_gettime[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  124 |     [01;31m[Kclock_gettime[m[K(CLOCK_MONOTONIC, &inicio);
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:124:19:[m[K [01;31m[Kerror: [m[K‘[01m[KCLOCK_MONOTONIC[m[K’ undeclared (first use in this function)
+  124 |     clock_gettime([01;31m[KCLOCK_MONOTONIC[m[K, &inicio);
+      |                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:125:5:[m[K [01;31m[Kerror: [m[Kimplicit declaration of function ‘[01m[Kcalcular_linhas[m[K’; did you mean ‘[01m[Kcalcular_pixel[m[K’? [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-15.2.0/gcc/Warning-Options.html#index-Wimplicit-function-declaration-Wimplicit-function-declaration]8;;[m[K]
+  125 |     [01;31m[Kcalcular_linhas[m[K(0, altura);
+      |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |     [32m[Kcalcular_pixel[m[K
+[01m[Kmandelbrot.c:129:9:[m[K [01;31m[Kerror: [m[Ktoo many arguments to function ‘[01m[Ksalvar_imagem[m[K’; expected 0, have 1
+  129 |     if(![01;31m[Ksalvar_imagem[m[K([32m[K"mandelbrot_"[m[K LOGIN "_serial.pgm")){
+      |         [01;31m[K^~~~~~~~~~~~~[m[K [32m[K~~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:66:5:[m[K [01;36m[Knote: [m[Kdeclared here
+   66 | int [01;36m[Ksalvar_imagem[m[K(void){
+      |     [01;36m[K^~~~~~~~~~~~~[m[K
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+
+andelbrot[00m$ 
+[K
+[A[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 mandelbrot.c -o mandelbrot
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1[27m./mandelbrot 4 4 50 1
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+
+andelbrot[00m$ [7mgit add mandelbrot.c[27m
+[C[C[C[C[C[C[C[C[C[C[Cgit add mandelbrot.c
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+
+andelbrot[00m$ giit co[K[K[K[K[Kt commit -m "versão serial do mandelbrot"
+[?2004l
+[main a2c064a] versão serial do mandelbrot
+ 1 file changed, 142 insertions(+)
+ create mode 100644 mandelbrot.c
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
 
 andelbrot[00m$ git push
 [?2004l
@@ -205,7 +240,210 @@ andelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mande
 
 [K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -m "adiciona OpenMP e estrutura inicial de Pthreads"[A[C[C[C[C[C[C[C[C[C[C[C[Cadd mandelbrot.c[K
 
-[K[A[C[C[C[C[C[C[C[C[C[C[C[C                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Script started on 2026-08-31 17:53:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="185" LINES="24"]
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/DesktoScript iniciado em 2026-08-31 07:37:12-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="154" LINES="13"]
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ pwdwhoami[2Pdate
+[?2004l
+seg 31 ago 2026 07:37:15 -03
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ date[1Ppwdwhoami
+[?2004l
+guest
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ whoami[2Pdate[1Ppwd
+[?2004l
+/home/guest/Desktop/implementação 2/Conjunto-de-Mandelbrot
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ .^V[K[7m/mandelbrot 4 4 50 1[27m/mandelbrot 4 4 50 1
+[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat mandelbrot_dad_serial.pgm[27mcat mandelbrot_dad_serial.pgm
+[?2004l
+5 10 10 10
+5 25 255 10
+5 25 255 10
+5 10 10 10
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ 
+[K
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1[27m
+
+[7mcat mandelbrot_dad_serial.pgm[27m[A
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 4 4 50 1
+
+cat mandelbrot_dad_serial.pgm
+[?2004l
+5 10 10 10
+5 25 255 10
+5 25 255 10
+5 10 10 10
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l
+[01m[Kmandelbrot.c:126:1:[m[K [01;31m[Kerror: [m[Kreturn type defaults to ‘[01m[Kint[m[K’ [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wimplicit-int-Wimplicit-int]8;;[m[K]
+  126 | [01;31m[Krotina_pthreads2[m[K(void *argumento){
+      | [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Krotina_pthreads2[m[K’:
+[01m[Kmandelbrot.c:140:12:[m[K [01;31m[Kerror: [m[Kreturning ‘[01m[Kvoid *[m[K’ from a function with return type ‘[01m[Kint[m[K’ makes integer from pointer without a cast [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc-14.2.0/gcc/Warning-Options.html#index-Wint-conversion-Wint-conversion]8;;[m[K]
+  140 |     return [01;31m[KNULL[m[K;
+      |            [01;31m[K^~~~[m[K
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^C[?2004l
+[?2004h[?2004l
+
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git add[K[K[K[K[K[K[K[7mgit add mandelbrot.c[27mgit add mandelbrot.c
+[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git commit -m "estu[Krutura inicial de pthreads [K2"
+[?2004l
+[main 96900cc] estrutura inicial de pthreads2
+ 1 file changed, 23 insertions(+), 12 deletions(-)
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ git push
+[?2004l
+Enumerating objects: 5, done.
+Counting objects:  20% (1/5)
+Counting objects:  40% (2/5)
+Counting objects:  60% (3/5)
+Counting objects:  80% (4/5)
+Counting objects: 100% (5/5)
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects:  33% (1/3)
+Compressing objects:  66% (2/3)
+Compressing objects: 100% (3/3)
+Compressing objects: 100% (3/3), done.
+Writing objects:  33% (1/3)
+Writing objects:  66% (2/3)
+Writing objects: 100% (3/3)
+Writing objects: 100% (3/3), 539 bytes | 539.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas:   0% (0/2)[K
+remote: Resolving deltas:  50% (1/2)[K
+remote: Resolving deltas: 100% (2/2)[K
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
+To https://github.com/danduleba/Conjunto-de-Mandelbrot.git
+   ac5a2c8..96900cc  main -> main
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mgcc -Wall -Wextra -pedantic -std=c11 -O2 \[27m
+
+[7m-fopenmp -pthread mandelbrot.c -o mandelbrot[27m[A
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 \
+
+-fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ ^V[K[7m./mandelbrot 4 4 50 2[27m./mandelbrot 4 4 50 2
+[?2004l
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
+[?2004l
+Serial: 0.000002s
+OpenMP: 0.000040s
+Pthreads1: 0.000063s
+Pthreads2: 0.000041s
+[?2004h]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-Mandelbrot[00m$ [7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm[27m
+
+[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm[27m
+
+[7mdiff mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm[27m[A[A
+]0;guest@localhost: ~/Desktop/implementação 2/Conjunto-de-Mandelbrot[01;32mguest@localhost[00m:[01;34m~/Desktop/implementação 2/Conjunto-de-ManScript started on 2026-08-31 17:07:08-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="185" LINES="24"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git push[K[7m./mandelbrot 800 600 1000 4[27m./mandelbrot 800 600 1000 4
+[?2004l
+bash: ./mandelbrot: No such file or directory
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ./mandelbrot 800 600 1000 4git push[Kcommit -m "correção de execução e medição das versoes paralelas"add mandelbrot.c[Kcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C./mandelbrot 800 600 1000 4[K
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcat times.txt[27mcat times.txt
+[?2004l
+Serial: 0.204066s
+OpenMP: 0.101460s
+Pthreads1: 0.100457s
+Pthreads2: 0.051779s
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"[27m
+
+[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"[27m
+
+[7mcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"[27m[A[Acmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"
+
+cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads1.pgm && echo "Pthreads1: imagem igual"
+
+cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"
+[?2004l
+OpenMP: imagem igual
+Pthreads1: imagem igual
+Pthreads2: imagem igual
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7mgit add mandelbrot.c evidencias.log[27mgit add mandelbrot.c evidencias.log
+[?2004l
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git commmit -m "feit[K[K[K[Kpthreads2 feito e testes [K[K[K[K[K[K[Kalguns testes
+[?2004l
+[?2004h> git commmit -m "pthreads2 feito e alguns testes"
+[?2004l
+[?2004h> git commmit -m "pthreads2 feito e alguns testes
+
+git commmit -m "pthreads2 feito e alguns testes"[A
+[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[Ccommmit -m "pthreads2 feito e alguns testes
+
+git commmit -m "pthreads2 feito e alguns testes"[A
+[C[C[C[C[C[C[12Padd mandelbrot.c evidencias.log
+
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[Ccmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"1.pgm && echo "Pthreads1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Popenmp.pgm && echo "OpenMP[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[Cat times.txt[K
+[C[C./mandelbrot 800 600 1000 4
+[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[C[C./mandelbrot 800 600 1000 4[K
+[C[Cgit push[Kcommit -m "correção de execução e medição das versoes paralelas"
+[C[C[C[C[C[Cadd mandelbrot.c[K
+[C[C[Ccc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste
+[C[Ccd "Conjunto-de-Mandelbrot"[K
+[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste
+[C[Cscript -a evidencias.log[K
+[C[C[16Pgit pushcommit -m "openmp com erro de de digitação"
+[C[C[C[C[C[C[27Padd mandelbrot.c
+[C[C[C[C[C[Ccommit -m "openmp com erro de de digitação"
+[C[C[C[C[C[Cpush[K
+[C[Cscript -a evidencias.log
+[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste
+[C[Ccd "Conjunto-de-Mandelbrot"[K
+[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot_teste[K
+[C[C[Cit add mandelbrot.c[K
+[C[C[C[C[C[Ccommit -m "correção de execução e medição das versoes paralelas"
+[C[C[C[C[C[Cpush[K
+[C[C./mandelbrot 800 600 1000 4
+[C[Cgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[C[C./mandelbrot 800 600 1000 4[K
+[C[C[14Pcat times.txt
+[C[C[Cmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_openmp.pgm && echo "OpenMP: imagem igual"[6@pthreads1.pgm && echo "Pthreads1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.pgm && echo "Pthreads2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[60Pgit add mandelbrot.c evidencias.log
+[C[C[C[C[C[Ccommmit -m "pthreads2 feito e alguns testes
+
+git commmit -m "pthreads2 feito e alguns testes"[A
+[C[C[K
+
+[K[A[C[C
+[?2004l
+[?2004h> exit
+[?2004l
+[?2004h> [?2004l
+
+bash: unexpected EOF while looking for matching `"'
+exit
+
+Script done on 2026-08-31 17:25:40-03:00 [COMMAND_EXIT_CODE="2"]
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                Script started on 2026-08-31 17:53:42-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="185" LINES="24"]
 [?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7m./mandelbrot 4 4 50 1[27mexit[Kgit commmit -m "pthreads2 feito e alguns testes"[K[12Padd mandelbrot.c evidencias.logcmp -s mandelbrot_dad_serial.pgm mandelbrot_dad_pthreads2.pgm && echo "Pthreads2: imagem igual"1.pgm && echo "Pthreads1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C2.pgm && echo "Pthreads2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[60Pgit add mandelbrot.c evidencias.logcommmit -m "pthreads2 feito e alguns testes"exit[K./mandelbrot 4 4 50 1[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kmake clean
 [?2004lrm -f mandelbrot
 [?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ make
@@ -225,4 +463,154 @@ andelbrot[00m$ gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mande
 255 255 255 255 255 42
 8 25 42 255 255 42
 8 17 25 34 255 17
-[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandel
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-MandelScript started on 2026-09-01 16:23:45-03:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="191" LINES="24"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7m./testar.sh[27m./testar.sh
+[?2004l========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[PASSOU] Makefile: compilacao
+[PASSOU] Executavel mandelbrot foi criado
+[PASSOU] Teste oficial Serial 4x4
+[PASSOU] Teste oficial OpenMP 6x6
+[PASSOU] Teste oficial Pthreads 1
+[PASSOU] Pthreads 2 produz a saida esperada
+[PASSOU] As quatro imagens sao identicas
+[PASSOU] Dimensao minima 1x1
+[PASSOU] Limite de uma iteracao
+[PASSOU] Divisao de linhas com resto
+[PASSOU] Mais threads do que linhas
+[PASSOU] Execucao normal sem saida em stdout
+[PASSOU] Todos os arquivos de saida foram criados
+[PASSOU] Formato do times.txt
+[PASSOU] Dimensoes e intensidades entre 0 e 255
+[PASSOU] Vinte repeticoes sem condicao de corrida
+[PASSOU] Teste maior 800x600
+[PASSOU] Sem argumentos
+[PASSOU] Quantidade insuficiente de argumentos
+[PASSOU] Quantidade excessiva de argumentos
+[PASSOU] Largura igual a zero
+[PASSOU] Altura negativa
+[PASSOU] Iteracoes iguais a zero
+[PASSOU] Numero de threads igual a zero
+[PASSOU] Argumento com texto
+[PASSOU] Argumento decimal
+[PASSOU] Argumento acima de INT_MAX
+[PASSOU] Imagem grande demais para alocar
+[PASSOU] Falha ao criar arquivo de saida
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    30
+Passaram: 30
+Falharam: 0
+
+RESULTADO FINAL: TODOS OS TESTES PASSARAM
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-01 16:29:25-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-01 16:23:28-03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="191" LINES="24"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ git push[K[7mchmod +x testar.sh[27m
+[7mscript -a evidencias.log[27m
+[7m./testar.sh[27m
+[7mexit[27m[A[A[A]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ chmod +x testar.sh
+script -a evidencias.log
+./testar.sh
+exit
+[?2004lScript started, output log file is 'evidencias.log'.
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [7m./testar.sh[27m./testar.sh
+[?2004l========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[PASSOU] Makefile: compilacao
+[PASSOU] Executavel mandelbrot foi criado
+[PASSOU] Teste oficial Serial 4x4
+[PASSOU] Teste oficial OpenMP 6x6
+[PASSOU] Teste oficial Pthreads 1
+[PASSOU] Pthreads 2 produz a saida esperada
+[PASSOU] As quatro imagens sao identicas
+[PASSOU] Dimensao minima 1x1
+[PASSOU] Limite de uma iteracao
+[PASSOU] Divisao de linhas com resto
+[PASSOU] Mais threads do que linhas
+[PASSOU] Execucao normal sem saida em stdout
+[PASSOU] Todos os arquivos de saida foram criados
+[PASSOU] Formato do times.txt
+[PASSOU] Dimensoes e intensidades entre 0 e 255
+[PASSOU] Vinte repeticoes sem condicao de corrida
+[PASSOU] Teste maior 800x600
+[PASSOU] Sem argumentos
+[PASSOU] Quantidade insuficiente de argumentos
+[PASSOU] Quantidade excessiva de argumentos
+[PASSOU] Largura igual a zero
+[PASSOU] Altura negativa
+[PASSOU] Iteracoes iguais a zero
+[PASSOU] Numero de threads igual a zero
+[PASSOU] Argumento com texto
+[PASSOU] Argumento decimal
+[PASSOU] Argumento acima de INT_MAX
+[PASSOU] Imagem grande demais para alocar
+[PASSOU] Falha ao criar arquivo de saida
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    30
+Passaram: 30
+Falharam: 0
+
+RESULTADO FINAL: TODOS OS TESTES PASSARAM
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ exit
+[?2004lexit
+Script done.
+========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[PASSOU] Makefile: compilacao
+[PASSOU] Executavel mandelbrot foi criado
+[PASSOU] Teste oficial Serial 4x4
+[PASSOU] Teste oficial OpenMP 6x6
+[PASSOU] Teste oficial Pthreads 1
+[PASSOU] Pthreads 2 produz a saida esperada
+[PASSOU] As quatro imagens sao identicas
+[PASSOU] Dimensao minima 1x1
+[PASSOU] Limite de uma iteracao
+[PASSOU] Divisao de linhas com resto
+[PASSOU] Mais threads do que linhas
+[PASSOU] Execucao normal sem saida em stdout
+[PASSOU] Todos os arquivos de saida foram criados
+[PASSOU] Formato do times.txt
+[PASSOU] Dimensoes e intensidades entre 0 e 255
+[PASSOU] Vinte repeticoes sem condicao de corrida
+[PASSOU] Teste maior 800x600
+[PASSOU] Sem argumentos
+[PASSOU] Quantidade insuficiente de argumentos
+[PASSOU] Quantidade excessiva de argumentos
+[PASSOU] Largura igual a zero
+[PASSOU] Altura negativa
+[PASSOU] Iteracoes iguais a zero
+[PASSOU] Numero de threads igual a zero
+[PASSOU] Argumento com texto
+[PASSOU] Argumento decimal
+[PASSOU] Argumento acima de INT_MAX
+[PASSOU] Imagem grande demais para alocar
+[PASSOU] Falha ao criar arquivo de saida
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    30
+Passaram: 30
+Falharam: 0
+
+RESULTADO FINAL: TODOS OS TESTES PASSARAM
+exit
+
+Script done on 2026-09-01 16:29:29-03:00 [COMMAND_EXIT_CODE="0"]
