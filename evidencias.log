@@ -614,3 +614,158 @@ RESULTADO FINAL: TODOS OS TESTES PASSARAM
 exit
 
 Script done on 2026-09-01 16:29:29-03:00 [COMMAND_EXIT_CODE="0"]
+Script started on 2026-09-02 15:25:19-03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="191" LINES="24"]
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean
+[?2004lrm -f mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make
+[?2004lgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ ./testar.sh
+[?2004l========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[FALHOU] Makefile: compilacao
+gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+mandelbrot.c: In function ‘rotina_pthreads2’:
+mandelbrot.c:139:55: error: expected ‘)’ before ‘;’ token
+  139 |             for(coluna = 0; coluna < largura; coluna++;){
+      |                ~                                      ^
+      |                                                       )
+mandelbrot.c:141:17: error: ‘imagem_pthreads2’ undeclared (first use in this function)
+  141 |                 imagem_pthreads2[posicao] = imagem[posicao];
+      |                 ^~~~~~~~~~~~~~~~
+mandelbrot.c:141:17: note: each undeclared identifier is reported only once for each function it appears in
+mandelbrot.c: In function ‘main’:
+mandelbrot.c:311:29: error: ‘mutex’ undeclared (first use in this function)
+  311 |      pthread_mutex_destroy(&mutex);
+      |                             ^~~~~
+make: *** [Makefile:8: mandelbrot] Error 1
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    2
+Passaram: 1
+Falharam: 1
+
+RESULTADO FINAL: EXISTEM TESTES COM FALHA
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mand
+elbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ./testar.sh
+[?2004l========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[FALHOU] Makefile: compilacao
+gcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+mandelbrot.c: In function ‘rotina_pthreads2’:
+mandelbrot.c:141:17: error: ‘imagem_pthreads2’ undeclared (first use in this function)
+  141 |                 imagem_pthreads2[posicao] = imagem[posicao];
+      |                 ^~~~~~~~~~~~~~~~
+mandelbrot.c:141:17: note: each undeclared identifier is reported only once for each function it appears in
+mandelbrot.c: In function ‘main’:
+mandelbrot.c:311:29: error: ‘mutex’ undeclared (first use in this function)
+  311 |      pthread_mutex_destroy(&mutex);
+      |                             ^~~~~
+make: *** [Makefile:8: mandelbrot] Error 1
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    2
+Passaram: 1
+Falharam: 1
+
+RESULTADO FINAL: EXISTEM TESTES COM FALHA
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ./testar.sh[7Pmake clean
+[?2004lrm -f mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ make clean./testar.sh[7Pmake
+[?2004lgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Krotina_pthreads2[m[K’:
+[01m[Kmandelbrot.c:141:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kimagem_pthreads2[m[K’ undeclared (first use in this function)
+  141 |                 [01;31m[Kimagem_pthreads2[m[K[posicao] = imagem[posicao];
+      |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[Kmandelbrot.c:141:17:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmandelbrot.c:311:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ undeclared (first use in this function)
+  311 |      pthread_mutex_destroy(&[01;31m[Kmutex[m[K);
+      |                             [01;31m[K^~~~~[m[K
+make: *** [Makefile:8: mandelbrot] Error 1
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean
+[?2004lrm -f mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean[K
+[?2004lgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[01m[Kmandelbrot.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmandelbrot.c:319:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kmutex[m[K’ undeclared (first use in this function)
+  319 |      pthread_mutex_destroy(&[01;31m[Kmutex[m[K);
+      |                             [01;31m[K^~~~~[m[K
+[01m[Kmandelbrot.c:319:29:[m[K [01;36m[Knote: [m[Keach undeclared identifier is reported only once for each function it appears in
+make: *** [Makefile:8: mandelbrot] Error 1
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean
+[?2004lrm -f mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean[K
+[?2004lgcc -Wall -Wextra -pedantic -std=c11 -O2 -fopenmp -pthread mandelbrot.c -o mandelbrot
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ make clean[K clean[K clean./testar.sh
+[?2004l========================================
+TESTES DO CONJUNTO DE MANDELBROT
+========================================
+
+[PASSOU] Makefile: make clean
+[PASSOU] Makefile: compilacao
+[PASSOU] Executavel mandelbrot foi criado
+[PASSOU] Teste oficial Serial 4x4
+[PASSOU] Teste oficial OpenMP 6x6
+[PASSOU] Teste oficial Pthreads 1
+[PASSOU] Pthreads 2 produz a saida esperada
+[PASSOU] As quatro imagens sao identicas
+[PASSOU] Dimensao minima 1x1
+[PASSOU] Limite de uma iteracao
+[PASSOU] Divisao de linhas com resto
+[PASSOU] Mais threads do que linhas
+[PASSOU] Execucao normal sem saida em stdout
+[PASSOU] Todos os arquivos de saida foram criados
+[PASSOU] Formato do times.txt
+[PASSOU] Dimensoes e intensidades entre 0 e 255
+[PASSOU] Vinte repeticoes sem condicao de corrida
+[PASSOU] Teste maior 800x600
+[PASSOU] Sem argumentos
+[PASSOU] Quantidade insuficiente de argumentos
+[PASSOU] Quantidade excessiva de argumentos
+[PASSOU] Largura igual a zero
+[PASSOU] Altura negativa
+[PASSOU] Iteracoes iguais a zero
+[PASSOU] Numero de threads igual a zero
+[PASSOU] Argumento com texto
+[PASSOU] Argumento decimal
+[PASSOU] Argumento acima de INT_MAX
+[PASSOU] Imagem grande demais para alocar
+[PASSOU] Falha ao criar arquivo de saida
+
+========================================
+RESUMO DOS TESTES
+========================================
+Total:    30
+Passaram: 30
+Falharam: 0
+
+RESULTADO FINAL: TODOS OS TESTES PASSARAM
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-M
+andelbrot[00m$ [K[A[K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ [K]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ ]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ E]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ X]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ I]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ T]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ 
+[?2004lEXIT: command not found
+[?2004h]0;danilo@PC-Danilo: /mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[01;32mdanilo@PC-Danilo[00m:[01;34m/mnt/c/Users/User/Desktop/implementação2/Conjunto-de-Mandelbrot[00m$ exit
+[?2004lexit
+
+Script done on 2026-09-02 16:01:54-03:00 [COMMAND_EXIT_CODE="127"]

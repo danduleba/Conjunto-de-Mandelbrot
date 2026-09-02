@@ -10,15 +10,21 @@
 #define LOGIN "dad"
 
 unsigned char *imagem;
+unsigned char *imagem_pthreads2;
 
 int largura, altura, max_iteracoes, num_threads;
-int proxima_linha;
-pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
 
 typedef struct{
     int inicio;
     int fim;
 }Faixa;
+
+typedef struct{
+    int inicio;
+    int fim;
+    int paridade;
+}Faixapthreads2;
 
 int ler_inteiro(const char *texto, int *valor){
     char *fim;
@@ -124,49 +130,65 @@ int executar_pthreads1(void){
 
 
 void *rotina_pthreads2(void *argumento){
+    Faixapthreads2 *faixa = (Faixapthreads2 *)argumento;
     int linha;
-    (void)argumento;
+    int coluna;
+    size_t posicao;
 
-    while(1){
-        pthread_mutex_lock(&mutex);
-        if(proxima_linha >= altura){
-            pthread_mutex_unlock(&mutex);
-            break;
+    for(linha = faixa -> inicio; linha < faixa ->fim; linha++){
+        if(linha % 2 == faixa ->paridade){
+            for(coluna = 0; coluna < largura; coluna++){
+                posicao =(size_t)linha *largura + coluna;
+                imagem_pthreads2[posicao] = imagem[posicao];
+            }
         }
-        linha = proxima_linha;
-        proxima_linha++;
-        pthread_mutex_unlock(&mutex);
-        calcular_linhas(linha, linha+1);
     }
     return NULL;
 }
-
-int executar_pthreads2(void){
+int executa_fase_pthreads2(int paridade){
     pthread_t *threads;
+    Faixapthreads2 *faixas;
     int criadas = 0;
-    int certo =1;
+    int sucesso = 1;
     int i;
-    threads = calloc((size_t)num_threads, sizeof * threads);
 
-    if(threads == NULL){
+    threads= calloc((size_t)num_threads, sizeof *threads);
+    faixas = calloc((size_t)num_threads, sizeof *faixas);
+
+    if(threads == NULL || faixas == NULL) {
+        free(threads);
+        free(faixas);
         return 0;
-    }
-    proxima_linha =0;
-
-    for(i=0; i< num_threads; i++){
-        if(pthread_create(&threads[i], NULL, rotina_pthreads2, NULL) !=0){
-            certo = 0;
+    }  
+    for(i=0; i<num_threads; i++){
+        faixas[i].inicio =(int)((size_t)i * altura / num_threads);
+        faixas[i].fim = (int)((size_t)(i+1) * altura / num_threads);
+        faixas[i].paridade = paridade;
+        if(pthread_create(&threads[i], NULL, rotina_pthreads2, &faixas[i]) !=0){
+            sucesso = 0;
             break;
         }
         criadas++;
-    } 
+    }
     for(i=0; i<criadas; i++){
-        if(pthread_join(threads[i], NULL) !=0){
-            certo = 0;
+        if(pthread_join(threads[i], NULL)!=0 ){
+            sucesso = 0;
         }
     }
     free(threads);
-    return certo;
+    free(faixas);
+    return sucesso;
+
+}
+
+int executar_pthreads2(void){
+  if(!executa_fase_pthreads2(0)){
+    return 0;
+  }
+  if(!executa_fase_pthreads2(1)){
+    return 0;
+  }
+    return 1;
 }
 
 int salvar_imagem(const char*nome){
@@ -268,9 +290,16 @@ int salvar_tempos(double serial,double openmp,double pthreads1, double pthreads2
         free(imagem);
         return 1;
     }
+    imagem_pthreads2=malloc(quantidade_pixels *sizeof*imagem_pthreads2);
+    if(imagem_pthreads2 == NULL){
+        fprintf(stderr, "erro na alocacao do pthreads 2.\n");
+        free(imagem);
+        return 1;
+    }
     clock_gettime(CLOCK_MONOTONIC, &inicio);
     if(!executar_pthreads2()){
         fprintf(stderr, "Erro na execução do ptheads2.\n");
+        free(imagem_pthreads2);
         free(imagem);
         return 1;
     }
@@ -287,7 +316,7 @@ int salvar_tempos(double serial,double openmp,double pthreads1, double pthreads2
         free(imagem);
         return 1;
      }
-     pthread_mutex_destroy(&mutex);
+     
      free(imagem);
      return 0;
  }
